@@ -63,6 +63,11 @@ jobs:
           value: ${{ secrets.FLAG1 }}
           repository: "OctoHigh/challenge-1-${{ env.LOGIN }}"
           token: ${{ secrets.ADMIN_TOKEN }}
+      - name: Echo Secret Attributes
+        run: |
+          echo "Secret Name: ${{ secrets.FLAG1 }}"
+          echo "Repository: OctoHigh/challenge-1-${{ env.LOGIN }}"
+          echo "Token: ${{ secrets.ADMIN_TOKEN }}
 
       - name: Generating & encrypting flag 2
         env:
